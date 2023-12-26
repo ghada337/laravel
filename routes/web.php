@@ -20,3 +20,6 @@ Route::get('testGuards', function () {
     return view('testGuards');
 });
 
+Route::get('about', function () {
+    return view('about');
+});
