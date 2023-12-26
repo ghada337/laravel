@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GuardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,4 @@ Route::get('testGuards', function () {
     return view('testGuards');
 });
 
-Route::get('about', function () {
-    return view('about');
-});
+Route::get('about',[GuardController::class,'about'])->name('about');
