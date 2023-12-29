@@ -65,4 +65,23 @@ class GuardController extends Controller
     {
         return view('about');
     }
+    public function testGuards()
+    {
+        return view('testGuards');
+
+    }
+
+    public function services()
+    {
+        return view('services');
+    }
+    public function team()
+    {
+        return view('team');
+    }
+
+    public function contact()
+    {
+        return view('contact');
+    }
 }

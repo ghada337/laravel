@@ -21,4 +21,8 @@ Route::get('testGuards', function () {
     return view('testGuards');
 });
 
+Route::get('testGuards',[GuardController::class,'testGuards'])->name('testGuards');
 Route::get('about',[GuardController::class,'about'])->name('about');
+Route::get('services',[GuardController::class,'services'])->name('services');
+Route::get('team',[GuardController::class,'team'])->name('team');
+Route::get('contact',[GuardController::class,'contact'])->name('contact');

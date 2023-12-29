@@ -1,5 +1,5 @@
 @extends('layouts.pages')
 @section('content')
 
-@include('includes.about')
+@include('includes.service')
 @endsection

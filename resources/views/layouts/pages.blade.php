@@ -11,7 +11,9 @@
 
 <body class="sub_page">
 
+
     @include('includes.header')
+</div>
 
     @yield('content')
 
