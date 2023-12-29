@@ -3,3 +3,6 @@
 
 @include('includes.about')
 @endsection
+@section('title')
+about
+@endsection

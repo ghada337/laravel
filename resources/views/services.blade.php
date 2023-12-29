@@ -3,3 +3,6 @@
 
 @include('includes.service')
 @endsection
+@section('title')
+services
+@endsection

@@ -3,3 +3,6 @@
 
 @include('includes.contact')
 @endsection
+@section('title')
+contact us
+@endsection
