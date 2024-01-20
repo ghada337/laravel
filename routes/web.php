@@ -21,8 +21,19 @@ Route::get('testGuards', function () {
     return view('testGuards');
 });
 
+Route::group(
+    [
+        'prefix' => LaravelLocalization::setLocale(),
+        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ]
+    ], function(){
 Route::get('testGuards',[GuardController::class,'testGuards'])->name('testGuards');
-Route::get('about',[GuardController::class,'about'])->name('about');
+Route::get('about',[GuardController::class,'about'])->middleware('verified')->name('about');
 Route::get('services',[GuardController::class,'services'])->name('services');
 Route::get('team',[GuardController::class,'team'])->name('team');
 Route::get('contact',[GuardController::class,'contact'])->name('contact');
+});
+
+Auth::routes(['verify' => true]);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('sendContactUs', [App\Http\Controllers\ContactController::class, 'sendContactUs'])->name('sendContactUs');

@@ -4,5 +4,5 @@
 @include('includes.contact')
 @endsection
 @section('title')
-contact us
+{{__('messages.TItle')}}
 @endsection
